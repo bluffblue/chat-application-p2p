@@ -17,6 +17,26 @@ This application is for educational purposes only and should not be used in prod
 - Basic error handling
 - No production-grade testing
 
+## 🎮 Running the Application
+
+1. **Start Server**
+   ```bash
+   java -cp target/p2p-chat-1.0-SNAPSHOT.jar com.chatapp.Main server
+   ```
+   Wait until you see "Server running on port 5000"
+
+2. **Start Client**
+   ```bash
+   java -cp target/p2p-chat-1.0-SNAPSHOT.jar com.chatapp.Main
+   ```
+   - Enter "localhost" when prompted for server IP
+   - Chat GUI will appear
+
+3. **Multiple Clients**
+   - Open new terminal for each client
+   - Run client command as above
+   - Use "localhost" for local testing
+
 ## Features
 
 - Real-time messaging

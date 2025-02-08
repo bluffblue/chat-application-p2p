@@ -1,5 +1,139 @@
+/* Theme Colors */
+* {
+    -primary-color: #1a73e8;
+    -secondary-color: #f0f2f5;
+    -text-color: #333333;
+    -light-text: #666666;
+    -bubble-sent: #1a73e8;
+    -bubble-received: #e8e8e8;
+}
+
 .root {
-    -fx-background-color: #f0f2f5;
+    -fx-background-color: -secondary-color;
+}
+
+.header-bar {
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-padding: 10 20;
+}
+
+.chat-bubble-sent {
+    -fx-background-color: -bubble-sent;
+    -fx-background-radius: 20 20 0 20;
+    -fx-padding: 10 15;
+    -fx-text-fill: white;
+    -fx-max-width: 400;
+}
+
+.chat-bubble-received {
+    -fx-background-color: -bubble-received;
+    -fx-background-radius: 20 20 20 0;
+    -fx-padding: 10 15;
+    -fx-text-fill: -text-color;
+    -fx-max-width: 400;
+}
+
+.timestamp {
+    -fx-font-size: 10px;
+    -fx-text-fill: -light-text;
+}
+
+.typing-indicator {
+    -fx-font-style: italic;
+    -fx-text-fill: -light-text;
+}
+
+.emoji-picker {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+}
+
+.message-input {
+    -fx-background-color: white;
+    -fx-background-radius: 25;
+    -fx-border-radius: 25;
+    -fx-border-color: transparent;
+    -fx-padding: 10 45 10 15;
+    -fx-font-size: 14px;
+}
+
+.send-button {
+    -fx-background-color: -primary-color;
+    -fx-background-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-graphic: url('/images/send-icon.png');
+}
+
+.emoji-button {
+    -fx-background-color: transparent;
+    -fx-padding: 5;
+    -fx-cursor: hand;
+}
+
+.emoji-button:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 5;
+}
+
+.message-reaction {
+    -fx-background-color: #f0f0f0;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+
+.message-reaction:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.file-preview {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-padding: 10;
+    -fx-spacing: 5;
+}
+
+.file-name {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+.search-field {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #e0e0e0;
+    -fx-padding: 8 15;
+}
+
+.search-results {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-padding: 10;
+}
+
+.user-avatar {
+    -fx-background-radius: 50%;
+}
+
+.online-indicator {
+    -fx-fill: #44b700;
+    -fx-radius: 5;
+}
+
+.message-status {
+    -fx-font-size: 10px;
+    -fx-text-fill: -light-text;
 }
 
 .header-label {
@@ -18,31 +152,6 @@
     -fx-border-width: 1px;
     -fx-font-family: 'Segoe UI';
     -fx-font-size: 14px;
-}
-
-.message-input {
-    -fx-background-color: white;
-    -fx-background-radius: 20;
-    -fx-border-radius: 20;
-    -fx-border-color: #e0e0e0;
-    -fx-border-width: 1px;
-    -fx-padding: 10 15;
-    -fx-font-family: 'Segoe UI';
-    -fx-font-size: 14px;
-}
-
-.send-button {
-    -fx-background-color: #1a73e8;
-    -fx-text-fill: white;
-    -fx-background-radius: 20;
-    -fx-padding: 10 25;
-    -fx-font-family: 'Segoe UI';
-    -fx-font-weight: bold;
-    -fx-cursor: hand;
-}
-
-.send-button:hover {
-    -fx-background-color: #1557b0;
 }
 
 .dialog-pane {
