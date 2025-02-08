@@ -1,0 +1,54 @@
+.root {
+    -fx-background-color: #f0f2f5;
+}
+
+.header-label {
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1a73e8;
+    -fx-padding: 0 0 10 0;
+}
+
+.message-area {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 14px;
+}
+
+.message-input {
+    -fx-background-color: white;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-padding: 10 15;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 14px;
+}
+
+.send-button {
+    -fx-background-color: #1a73e8;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 10 25;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.send-button:hover {
+    -fx-background-color: #1557b0;
+}
+
+.dialog-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+} 

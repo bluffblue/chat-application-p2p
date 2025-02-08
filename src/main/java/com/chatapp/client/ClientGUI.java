@@ -26,29 +26,18 @@ public class ClientGUI extends Application {
         primaryStage.setTitle("P2P Chat Application");
 
         VBox root = new VBox(15);
-        root.setStyle("-fx-background-color: #f0f2f5;");
         root.setPadding(new Insets(20));
 
         // Header
         Label headerLabel = new Label("P2P Chat");
-        headerLabel.setFont(Font.font("Segoe UI", FontWeight.BOLD, 24));
-        headerLabel.setTextFill(Color.web("#1a73e8"));
-        headerLabel.setStyle("-fx-padding: 0 0 10 0;");
+        headerLabel.getStyleClass().add("header-label");
 
         // Message Area
         messageArea = new TextArea();
         messageArea.setEditable(false);
         messageArea.setWrapText(true);
         messageArea.setPrefRowCount(20);
-        messageArea.setStyle(
-            "-fx-background-color: white;" +
-            "-fx-background-radius: 10;" +
-            "-fx-border-radius: 10;" +
-            "-fx-border-color: #e0e0e0;" +
-            "-fx-border-width: 1px;" +
-            "-fx-font-family: 'Segoe UI';" +
-            "-fx-font-size: 14px;"
-        );
+        messageArea.getStyleClass().add("message-area");
         
         VBox.setVgrow(messageArea, Priority.ALWAYS);
 
@@ -58,53 +47,11 @@ public class ClientGUI extends Application {
         
         messageInput = new TextField();
         messageInput.setPromptText("Type your message...");
-        messageInput.setStyle(
-            "-fx-background-color: white;" +
-            "-fx-background-radius: 20;" +
-            "-fx-border-radius: 20;" +
-            "-fx-border-color: #e0e0e0;" +
-            "-fx-border-width: 1px;" +
-            "-fx-padding: 10 15;" +
-            "-fx-font-family: 'Segoe UI';" +
-            "-fx-font-size: 14px;"
-        );
+        messageInput.getStyleClass().add("message-input");
         HBox.setHgrow(messageInput, Priority.ALWAYS);
 
         Button sendButton = new Button("Send");
-        sendButton.setStyle(
-            "-fx-background-color: #1a73e8;" +
-            "-fx-text-fill: white;" +
-            "-fx-background-radius: 20;" +
-            "-fx-padding: 10 25;" +
-            "-fx-font-family: 'Segoe UI';" +
-            "-fx-font-weight: bold;" +
-            "-fx-cursor: hand;"
-        );
-        
-        // Hover effect for send button
-        sendButton.setOnMouseEntered(e -> 
-            sendButton.setStyle(
-                "-fx-background-color: #1557b0;" +
-                "-fx-text-fill: white;" +
-                "-fx-background-radius: 20;" +
-                "-fx-padding: 10 25;" +
-                "-fx-font-family: 'Segoe UI';" +
-                "-fx-font-weight: bold;" +
-                "-fx-cursor: hand;"
-            )
-        );
-        
-        sendButton.setOnMouseExited(e -> 
-            sendButton.setStyle(
-                "-fx-background-color: #1a73e8;" +
-                "-fx-text-fill: white;" +
-                "-fx-background-radius: 20;" +
-                "-fx-padding: 10 25;" +
-                "-fx-font-family: 'Segoe UI';" +
-                "-fx-font-weight: bold;" +
-                "-fx-cursor: hand;"
-            )
-        );
+        sendButton.getStyleClass().add("send-button");
 
         // Add shadow effect
         DropShadow shadow = new DropShadow();
@@ -125,6 +72,8 @@ public class ClientGUI extends Application {
         root.getChildren().addAll(headerLabel, messageArea, inputBox);
 
         Scene scene = new Scene(root, 800, 600);
+        scene.getStylesheets().add(getClass().getResource("/styles/chat-style.css").toExternalForm());
+        
         primaryStage.setScene(scene);
         primaryStage.setMinWidth(600);
         primaryStage.setMinHeight(400);
